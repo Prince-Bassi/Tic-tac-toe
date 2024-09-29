@@ -1,0 +1,41 @@
+* {box-sizing: border-box;}
+
+:root {
+       --boxSize: 100px;
+}
+
+body {
+       display: flex;
+       justify-content: center;
+       padding-top: 100px;
+}
+
+.game {
+       display: grid;
+       grid-template-columns: repeat(3, auto);
+       grid-template-rows: repeat(3, auto);
+       grid-gap: 3px;
+}
+
+.game .box {
+       width: var(--boxSize);
+       height: var(--boxSize);
+       background: pink;
+}
+
+.game .line {
+       width: calc(3 * var(--boxSize) + 10px);
+       height: 3px;
+       position: absolute;
+       background: lightgray;
+       border-radius: 50px;
+}
+
+.game .line.hori {
+       left: 50%;
+       transform: translateX(-50%);
+}
+
+.game .line.vert {
+       transform: rotate(90deg) translateY(50%);
+}
