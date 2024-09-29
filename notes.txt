@@ -1,0 +1,12 @@
+Features:
+  -A start, settings and a game html page. The start page should contain play and settings buttons. Design as you see fit.
+  -Game page should have an overlay of selecting your symbol which should fade away after disabling pointer events. It should have a main board, your current wins and losses against the bot.
+  -After randomizing the turn, the player can start after which, the bot calculates the opitimal move and plays it. The cycle repeats again.
+  -With each move, the game also calculates if 3 same symbols are together and checks for someone winning. If the boxes run out, the game is tied. The game over element is activated as an
+   overlay from which, the player can play again or go to the start page.
+
+Game logic:
+  There should be a main Game object which should be responsible for managing turns, storing the symbols for the player.
+  There should be a Box object which, if empty, check for click events when its the player's turn. When the player clicks, the bot should be choose its box and the player can choose again.
+  For every move, the main Game object should check for a win and see if its tied by checking if there's a box empty. After this, the game activates the game over overlay and after turning
+  off all the event listeners if there are empty boxes left.
